@@ -23,6 +23,11 @@ Partial Class frmClicker
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Title2 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnUpgrade1 = New System.Windows.Forms.Button()
@@ -32,10 +37,11 @@ Partial Class frmClicker
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.btnDev = New System.Windows.Forms.Button()
         Me.dtpDecor2 = New System.Windows.Forms.DateTimePicker()
-        Me.webDecor3 = New System.Windows.Forms.WebBrowser()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.lnkDecor3 = New System.Windows.Forms.LinkLabel()
         Me.rbtDecor4 = New System.Windows.Forms.RadioButton()
+        Me.rbtDecor42 = New System.Windows.Forms.RadioButton()
+        Me.rbtDecor43 = New System.Windows.Forms.RadioButton()
+        Me.chtDecor3 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        CType(Me.chtDecor3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -118,64 +124,75 @@ Partial Class frmClicker
         Me.dtpDecor2.Value = New Date(2000, 1, 1, 0, 0, 0, 0)
         Me.dtpDecor2.Visible = False
         '
-        'webDecor3
-        '
-        Me.webDecor3.Location = New System.Drawing.Point(17, 167)
-        Me.webDecor3.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.webDecor3.Name = "webDecor3"
-        Me.webDecor3.ScriptErrorsSuppressed = True
-        Me.webDecor3.Size = New System.Drawing.Size(110, 66)
-        Me.webDecor3.TabIndex = 8
-        Me.webDecor3.Url = New System.Uri("http://www.google.com", System.UriKind.Absolute)
-        Me.webDecor3.Visible = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Label2.Location = New System.Drawing.Point(0, 374)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(106, 13)
-        Me.Label2.TabIndex = 9
-        Me.Label2.Text = "click me to fullscreen"
-        Me.Label2.Visible = False
-        '
-        'lnkDecor3
-        '
-        Me.lnkDecor3.AutoSize = True
-        Me.lnkDecor3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.lnkDecor3.LinkColor = System.Drawing.Color.Navy
-        Me.lnkDecor3.Location = New System.Drawing.Point(0, 361)
-        Me.lnkDecor3.Name = "lnkDecor3"
-        Me.lnkDecor3.Size = New System.Drawing.Size(206, 13)
-        Me.lnkDecor3.TabIndex = 10
-        Me.lnkDecor3.TabStop = True
-        Me.lnkDecor3.Text = "if you get to a blocked website ur screwed"
-        Me.lnkDecor3.Visible = False
-        Me.lnkDecor3.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        '
         'rbtDecor4
         '
         Me.rbtDecor4.AutoSize = True
-        Me.rbtDecor4.Checked = True
-        Me.rbtDecor4.Location = New System.Drawing.Point(17, 144)
+        Me.rbtDecor4.Location = New System.Drawing.Point(17, 98)
         Me.rbtDecor4.Name = "rbtDecor4"
-        Me.rbtDecor4.Size = New System.Drawing.Size(83, 17)
+        Me.rbtDecor4.Size = New System.Drawing.Size(78, 17)
         Me.rbtDecor4.TabIndex = 11
-        Me.rbtDecor4.TabStop = True
-        Me.rbtDecor4.Text = "Background"
+        Me.rbtDecor4.Text = "Dark Mode"
         Me.rbtDecor4.UseVisualStyleBackColor = True
         Me.rbtDecor4.Visible = False
+        '
+        'rbtDecor42
+        '
+        Me.rbtDecor42.AutoSize = True
+        Me.rbtDecor42.Checked = True
+        Me.rbtDecor42.Location = New System.Drawing.Point(17, 121)
+        Me.rbtDecor42.Name = "rbtDecor42"
+        Me.rbtDecor42.Size = New System.Drawing.Size(78, 17)
+        Me.rbtDecor42.TabIndex = 12
+        Me.rbtDecor42.Text = "Light Mode"
+        Me.rbtDecor42.UseVisualStyleBackColor = True
+        Me.rbtDecor42.Visible = False
+        '
+        'rbtDecor43
+        '
+        Me.rbtDecor43.AutoSize = True
+        Me.rbtDecor43.Location = New System.Drawing.Point(17, 144)
+        Me.rbtDecor43.Name = "rbtDecor43"
+        Me.rbtDecor43.Size = New System.Drawing.Size(129, 17)
+        Me.rbtDecor43.TabIndex = 13
+        Me.rbtDecor43.Text = "INVISIBLE MODE???"
+        Me.rbtDecor43.UseVisualStyleBackColor = True
+        Me.rbtDecor43.Visible = False
+        '
+        'chtDecor3
+        '
+        ChartArea2.Name = "ChartArea1"
+        Me.chtDecor3.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.chtDecor3.Legends.Add(Legend2)
+        Me.chtDecor3.Location = New System.Drawing.Point(17, 167)
+        Me.chtDecor3.Name = "chtDecor3"
+        Me.chtDecor3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = ":O"
+        Series4.ChartArea = "ChartArea1"
+        Series4.Legend = "Legend1"
+        Series4.Name = "sillys :)"
+        Me.chtDecor3.Series.Add(Series3)
+        Me.chtDecor3.Series.Add(Series4)
+        Me.chtDecor3.Size = New System.Drawing.Size(200, 81)
+        Me.chtDecor3.TabIndex = 14
+        Me.chtDecor3.Text = "Chart :3"
+        Title2.Name = "title"
+        Title2.Text = "Number of goolies in a goober"
+        Me.chtDecor3.Titles.Add(Title2)
+        Me.chtDecor3.Visible = False
         '
         'frmClicker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(438, 387)
+        Me.Controls.Add(Me.chtDecor3)
+        Me.Controls.Add(Me.rbtDecor43)
+        Me.Controls.Add(Me.rbtDecor42)
         Me.Controls.Add(Me.rbtDecor4)
-        Me.Controls.Add(Me.lnkDecor3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.webDecor3)
         Me.Controls.Add(Me.dtpDecor2)
         Me.Controls.Add(Me.btnDev)
         Me.Controls.Add(Me.pgbDecor1)
@@ -186,7 +203,8 @@ Partial Class frmClicker
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmClicker"
         Me.Text = "Clicker Game"
-        Me.TransparencyKey = System.Drawing.SystemColors.Menu
+        Me.TransparencyKey = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        CType(Me.chtDecor3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -201,8 +219,8 @@ Partial Class frmClicker
     Friend WithEvents btnDev As Button
     Public WithEvents Timer1 As Timer
     Friend WithEvents dtpDecor2 As DateTimePicker
-    Friend WithEvents webDecor3 As WebBrowser
-    Friend WithEvents Label2 As Label
-    Friend WithEvents lnkDecor3 As LinkLabel
     Friend WithEvents rbtDecor4 As RadioButton
+    Friend WithEvents rbtDecor42 As RadioButton
+    Friend WithEvents rbtDecor43 As RadioButton
+    Friend WithEvents chtDecor3 As DataVisualization.Charting.Chart
 End Class
