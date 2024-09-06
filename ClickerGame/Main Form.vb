@@ -1,4 +1,6 @@
-﻿Public Class frmClicker
+﻿' Pretty please leave comments so I can at least comprehend this =D (since I don't really know VB)
+' - beese79
+Public Class frmClicker
     Dim clicks As Integer = 1
     Dim modifier As Integer = 0
     Dim decormod As Integer = 0
