@@ -98,7 +98,7 @@ Public Class frmClicker
         End If
     End Sub
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick ' this was for the progress bar, i DONT know how it's moving
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick ' this was for the progress bar, i DONT know how it's moving. now its for changing the glaggle message
         Dim randomnumber As Integer ' make a variable
         Dim lastnumber As Integer
         randomnumber = Int((10 * Rnd()) + 1)
@@ -136,7 +136,7 @@ Public Class frmClicker
             Dim myToolTipText = "..."
             totGlag.SetToolTip(Me.picGlag, myToolTipText)
         ElseIf randomnumber = 11 Then
-            Dim myToolTipText = "the fog is coming. there is nowhere to run or hide. Accept it. Accept DEATH. ONLY DEATH TRULY AWAITS YOU"
+            Dim myToolTipText = "the fog is coming. there is nowhere to run or hide. Accept it. Accept DEATH. ONLY DEATH TRULY AWAITS YOU" ' do not
             totGlag.SetToolTip(Me.picGlag, myToolTipText)
         End If
         lastnumber = randomnumber
