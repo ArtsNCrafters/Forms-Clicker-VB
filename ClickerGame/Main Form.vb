@@ -15,6 +15,10 @@ Public Class frmClicker
     Dim Control As Color = Color.FromArgb(255, 233, 233, 233)
     Dim Transparent As Color = Color.FromArgb(0, 0, 0, 0)
     Dim glagmessage As String = "Hello Guys"
+    Private _rnd As New Random()
+    Function RandomNumber(ByVal low As Integer, ByVal high As Integer) As Integer
+        Return _rnd.Next(low, high)
+    End Function
     ' tempmessage = (CInt(message) + 1 + CInt(message2)).ToString
     ' the temp message is for combining strings and integers
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click ' on click
@@ -45,7 +49,7 @@ Public Class frmClicker
         If Label1.Text >= 1000 + (modifier) Then ' if its >= 1000 plus modifier
             Label1.Text = Label1.Text - (1000 + modifier) ' subtract it
             Dim randomnumber As Integer ' make a variable
-            randomnumber = Int((4 * Rnd()) + 1) ' make it pick from 1 to 4 (for some reason it isn't truly random yet
+            randomnumber = Int((4 * Rnd()) + 1) ' make it pick from 1 to 4 (for some reason it isn't truly random yet)
             If randomnumber = 1 Then 'if its 1 then
                 If pgbDecor1.Visible = False Then ' if it isnt visible then
                     pgbDecor1.Visible = True ' show it
@@ -96,11 +100,14 @@ Public Class frmClicker
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick ' this was for the progress bar, i DONT know how it's moving
         Dim randomnumber As Integer ' make a variable
+        Dim lastnumber As Integer
         randomnumber = Int((10 * Rnd()) + 1)
+        While lastnumber = randomnumber
+            randomnumber = Int((10 * Rnd()) + 1)
+        End While
         If randomnumber = 1 Then
             Dim myToolTipText = "hai!!!!!! :)"
             totGlag.SetToolTip(Me.picGlag, myToolTipText)
-
         ElseIf randomnumber = 2 Then
             Dim myToolTipText = "hello!!!!!! :3"
             totGlag.SetToolTip(Me.picGlag, myToolTipText)
@@ -132,6 +139,7 @@ Public Class frmClicker
             Dim myToolTipText = "the fog is coming. there is nowhere to run or hide. Accept it. Accept DEATH. ONLY DEATH TRULY AWAITS YOU"
             totGlag.SetToolTip(Me.picGlag, myToolTipText)
         End If
+        lastnumber = randomnumber
     End Sub
 
     Private Sub btnDev_Click(sender As Object, e As EventArgs) Handles btnDev.Click ' ez dev button

@@ -171,7 +171,10 @@ Partial Class frmClicker
         'totGlag
         '
         Me.totGlag.Active = False
-        Me.totGlag.IsBalloon = True
+        Me.totGlag.AutomaticDelay = 0
+        Me.totGlag.AutoPopDelay = 99999999
+        Me.totGlag.InitialDelay = 0
+        Me.totGlag.ReshowDelay = 0
         Me.totGlag.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         Me.totGlag.ToolTipTitle = "Glag Says:"
         '
