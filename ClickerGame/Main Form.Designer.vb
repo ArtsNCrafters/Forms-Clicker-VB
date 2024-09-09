@@ -23,11 +23,6 @@ Partial Class frmClicker
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Title2 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnUpgrade1 = New System.Windows.Forms.Button()
@@ -40,8 +35,9 @@ Partial Class frmClicker
         Me.rbtDecor4 = New System.Windows.Forms.RadioButton()
         Me.rbtDecor42 = New System.Windows.Forms.RadioButton()
         Me.rbtDecor43 = New System.Windows.Forms.RadioButton()
-        Me.chtDecor3 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        CType(Me.chtDecor3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.picGlag = New System.Windows.Forms.PictureBox()
+        Me.totGlag = New System.Windows.Forms.ToolTip(Me.components)
+        CType(Me.picGlag, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -104,7 +100,8 @@ Partial Class frmClicker
         '
         'Timer1
         '
-        Me.Timer1.Interval = 10
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 10000
         '
         'btnDev
         '
@@ -143,6 +140,7 @@ Partial Class frmClicker
         Me.rbtDecor42.Name = "rbtDecor42"
         Me.rbtDecor42.Size = New System.Drawing.Size(78, 17)
         Me.rbtDecor42.TabIndex = 12
+        Me.rbtDecor42.TabStop = True
         Me.rbtDecor42.Text = "Light Mode"
         Me.rbtDecor42.UseVisualStyleBackColor = True
         Me.rbtDecor42.Visible = False
@@ -158,30 +156,24 @@ Partial Class frmClicker
         Me.rbtDecor43.UseVisualStyleBackColor = True
         Me.rbtDecor43.Visible = False
         '
-        'chtDecor3
+        'picGlag
         '
-        ChartArea2.Name = "ChartArea1"
-        Me.chtDecor3.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        Me.chtDecor3.Legends.Add(Legend2)
-        Me.chtDecor3.Location = New System.Drawing.Point(17, 167)
-        Me.chtDecor3.Name = "chtDecor3"
-        Me.chtDecor3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel
-        Series3.ChartArea = "ChartArea1"
-        Series3.Legend = "Legend1"
-        Series3.Name = ":O"
-        Series4.ChartArea = "ChartArea1"
-        Series4.Legend = "Legend1"
-        Series4.Name = "sillys :)"
-        Me.chtDecor3.Series.Add(Series3)
-        Me.chtDecor3.Series.Add(Series4)
-        Me.chtDecor3.Size = New System.Drawing.Size(200, 81)
-        Me.chtDecor3.TabIndex = 14
-        Me.chtDecor3.Text = "Chart :3"
-        Title2.Name = "title"
-        Title2.Text = "Number of goolies in a goober"
-        Me.chtDecor3.Titles.Add(Title2)
-        Me.chtDecor3.Visible = False
+        Me.picGlag.Image = Global.ClickerGame.My.Resources.Resources.gigglr_prev_ui__1_
+        Me.picGlag.Location = New System.Drawing.Point(17, 167)
+        Me.picGlag.Name = "picGlag"
+        Me.picGlag.Size = New System.Drawing.Size(129, 81)
+        Me.picGlag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picGlag.TabIndex = 14
+        Me.picGlag.TabStop = False
+        Me.totGlag.SetToolTip(Me.picGlag, "testing testing hai chat :))")
+        Me.picGlag.Visible = False
+        '
+        'totGlag
+        '
+        Me.totGlag.Active = False
+        Me.totGlag.IsBalloon = True
+        Me.totGlag.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
+        Me.totGlag.ToolTipTitle = "Glag Says:"
         '
         'frmClicker
         '
@@ -189,7 +181,7 @@ Partial Class frmClicker
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(438, 387)
-        Me.Controls.Add(Me.chtDecor3)
+        Me.Controls.Add(Me.picGlag)
         Me.Controls.Add(Me.rbtDecor43)
         Me.Controls.Add(Me.rbtDecor42)
         Me.Controls.Add(Me.rbtDecor4)
@@ -204,7 +196,7 @@ Partial Class frmClicker
         Me.Name = "frmClicker"
         Me.Text = "Clicker Game"
         Me.TransparencyKey = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        CType(Me.chtDecor3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picGlag, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -222,5 +214,6 @@ Partial Class frmClicker
     Friend WithEvents rbtDecor4 As RadioButton
     Friend WithEvents rbtDecor42 As RadioButton
     Friend WithEvents rbtDecor43 As RadioButton
-    Friend WithEvents chtDecor3 As DataVisualization.Charting.Chart
+    Friend WithEvents picGlag As PictureBox
+    Friend WithEvents totGlag As ToolTip
 End Class

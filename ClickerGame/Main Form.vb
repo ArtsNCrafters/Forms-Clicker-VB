@@ -14,8 +14,9 @@ Public Class frmClicker
     Dim Black As Color = Color.FromArgb(255, 50, 50, 50)
     Dim Control As Color = Color.FromArgb(255, 233, 233, 233)
     Dim Transparent As Color = Color.FromArgb(0, 0, 0, 0)
+    Dim glagmessage As String = "Hello Guys"
     ' tempmessage = (CInt(message) + 1 + CInt(message2)).ToString
-' the temp message is for combining strings and integers
+    ' the temp message is for combining strings and integers
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click ' on click
         Label1.Text = Label1.Text + clicks ' add the clicks value to the label (clicks can be changed by the upgrade)
         pgbDecor1.Value = pgbDecor1.Value + 1 'the code below is for a dynamic decor
@@ -51,7 +52,7 @@ Public Class frmClicker
                     lblDecor.Visible = True ' this is just to show what you got
                     lblDecor.Text = "You got a progressbar :)"
                 Else
-                    lblDecor.Text = "Aw, it was a duplicate :("
+                    lblDecor.Text = "Aw, it was a duplicate progress bar :("
                 End If
             ElseIf randomnumber = 2 Then ' if its 2 then
                 If dtpDecor2.Visible = False Then ' if its not visible then
@@ -59,15 +60,16 @@ Public Class frmClicker
                     lblDecor.Visible = True
                     lblDecor.Text = "You got a date-time picker :)"
                 Else
-                    lblDecor.Text = "Aw, it was a duplicate :("
+                    lblDecor.Text = "Aw, it was a duplicate date-time picker :("
                 End If
             ElseIf randomnumber = 3 Then ' if its 3 yada yada you probably get it
-                If chtDecor3.Visible = False Then
-                    chtDecor3.Visible = True
+                If picGlag.Visible = False Then
+                    picGlag.Visible = True
                     lblDecor.Visible = True
-                    lblDecor.Text = "You got a... SILLY CHART???? :O"
+                    totGlag.Active = True
+                    lblDecor.Text = "You got a... SILLY GLAGGLE???? :O"
                 Else
-                    lblDecor.Text = "Aw, it was a duplicate :("
+                    lblDecor.Text = "Aw, it was a duplicate glaggle :("
                 End If
             ElseIf randomnumber = 4 Then ' this is a bit strange, i'm constantly changing this one
                 If rbtDecor4.Visible = False Then
@@ -77,7 +79,7 @@ Public Class frmClicker
                     lblDecor.Visible = True
                     lblDecor.Text = "You got a background changer :)"
                 Else
-                    lblDecor.Text = "Aw, it was a duplicate :("
+                    lblDecor.Text = "Aw, it was a duplicate background changer :("
                 End If
             End If
             modifier = modifier + 10
@@ -93,7 +95,43 @@ Public Class frmClicker
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick ' this was for the progress bar, i DONT know how it's moving
+        Dim randomnumber As Integer ' make a variable
+        randomnumber = Int((10 * Rnd()) + 1)
+        If randomnumber = 1 Then
+            Dim myToolTipText = "hai!!!!!! :)"
+            totGlag.SetToolTip(Me.picGlag, myToolTipText)
 
+        ElseIf randomnumber = 2 Then
+            Dim myToolTipText = "hello!!!!!! :3"
+            totGlag.SetToolTip(Me.picGlag, myToolTipText)
+        ElseIf randomnumber = 3 Then
+            Dim myToolTipText = "that's some very nice clicking. I really like it :D"
+            totGlag.SetToolTip(Me.picGlag, myToolTipText)
+        ElseIf randomnumber = 4 Then
+            Dim myToolTipText = "hi! how are you doing? Great? GREAT! THAT MAKES MY SO HAPPY :D :) :3 :O"
+            totGlag.SetToolTip(Me.picGlag, myToolTipText)
+        ElseIf randomnumber = 5 Then
+            Dim myToolTipText = "glaggl"
+            totGlag.SetToolTip(Me.picGlag, myToolTipText)
+        ElseIf randomnumber = 6 Then
+            Dim myToolTipText = "you should visit glaggleland. it's so fun and silly :))))"
+            totGlag.SetToolTip(Me.picGlag, myToolTipText)
+        ElseIf randomnumber = 7 Then
+            Dim myToolTipText = "hi chat. today we are glaggling in this silly clicker game"
+            totGlag.SetToolTip(Me.picGlag, myToolTipText)
+        ElseIf randomnumber = 8 Then
+            Dim myToolTipText = "HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA"
+            totGlag.SetToolTip(Me.picGlag, myToolTipText)
+        ElseIf randomnumber = 9 Then
+            Dim myToolTipText = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            totGlag.SetToolTip(Me.picGlag, myToolTipText)
+        ElseIf randomnumber = 10 Then
+            Dim myToolTipText = "..."
+            totGlag.SetToolTip(Me.picGlag, myToolTipText)
+        ElseIf randomnumber = 11 Then
+            Dim myToolTipText = "the fog is coming. there is nowhere to run or hide. Accept it. Accept DEATH. ONLY DEATH TRULY AWAITS YOU"
+            totGlag.SetToolTip(Me.picGlag, myToolTipText)
+        End If
     End Sub
 
     Private Sub btnDev_Click(sender As Object, e As EventArgs) Handles btnDev.Click ' ez dev button
