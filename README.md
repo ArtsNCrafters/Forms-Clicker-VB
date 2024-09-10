@@ -1,3 +1,5 @@
+![icon2](https://github.com/user-attachments/assets/440bc580-2f77-4e5e-a5e4-d08138961472)
+
 # Hey!!! Hi!!! This is a small, fun project I'm working on in my free time. So far, it's just a silly clicker game: you click, and you get points.
 Some funny features include an upgrade and a decoration button, with 4 decoration types so far.
 If you have any ideas, lmk!! :)
