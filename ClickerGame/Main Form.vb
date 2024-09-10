@@ -1,4 +1,4 @@
-﻿' Pretty please leave comments so I can at least comprehend this =D (since I don't really know VB)
+' Pretty please leave comments so I can at least comprehend this =D (since I don't really know VB)
 ' - beese79
 ' Alright :) -Arts
 Public Class frmClicker
@@ -106,7 +106,7 @@ Public Class frmClicker
             Dim myToolTipText = "hai!!!!!! :)"
             totGlag.SetToolTip(Me.picGlag, myToolTipText)
         ElseIf randomnumber = 2 Then
-            Dim myToolTipText = "hello!!!!!! :3"
+            Dim myToolTipText = "hello!!!!!! :]"
             totGlag.SetToolTip(Me.picGlag, myToolTipText)
         ElseIf randomnumber = 3 Then
             Dim myToolTipText = "that's some very nice clicking. I really like it :D"
