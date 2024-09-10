@@ -15,10 +15,7 @@ Public Class frmClicker
     Dim Control As Color = Color.FromArgb(255, 233, 233, 233)
     Dim Transparent As Color = Color.FromArgb(0, 0, 0, 0)
     Dim glagmessage As String = "Hello Guys"
-    Private _rnd As New Random()
-    Function RandomNumber(ByVal low As Integer, ByVal high As Integer) As Integer
-        Return _rnd.Next(low, high)
-    End Function
+
     ' tempmessage = (CInt(message) + 1 + CInt(message2)).ToString
     ' the temp message is for combining strings and integers
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click ' on click
@@ -169,5 +166,15 @@ Public Class frmClicker
 
     Private Sub rbtDecor43_CheckedChanged(sender As Object, e As EventArgs) Handles rbtDecor43.CheckedChanged ' makes the form transparent lol
         Me.Opacity = 0.5
+    End Sub
+
+    Private Sub mtbDecor5_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs)
+
+    End Sub
+
+    Private Sub txtDecor5_TextChanged(sender As Object, e As EventArgs) Handles txtDecor5.TextChanged
+        If txtDecor5.Text = "clicker" Then
+            txtDecor5.Visible = False
+        End If
     End Sub
 End Class

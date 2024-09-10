@@ -23,6 +23,7 @@ Partial Class frmClicker
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmClicker))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnUpgrade1 = New System.Windows.Forms.Button()
@@ -37,46 +38,47 @@ Partial Class frmClicker
         Me.rbtDecor43 = New System.Windows.Forms.RadioButton()
         Me.totGlag = New System.Windows.Forms.ToolTip(Me.components)
         Me.picGlag = New System.Windows.Forms.PictureBox()
+        Me.txtDecor5 = New System.Windows.Forms.TextBox()
         CType(Me.picGlag, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.25!)
-        Me.Label1.Location = New System.Drawing.Point(18, 14)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 42)
+        Me.Label1.Size = New System.Drawing.Size(30, 35)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "0"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(26, 444)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(17, 296)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(614, 118)
+        Me.Button1.Size = New System.Drawing.Size(409, 79)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "&Click"
+        Me.totGlag.SetToolTip(Me.Button1, "you use this to click :)")
         Me.Button1.UseVisualStyleBackColor = True
         '
         'btnUpgrade1
         '
-        Me.btnUpgrade1.Location = New System.Drawing.Point(513, 352)
-        Me.btnUpgrade1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnUpgrade1.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUpgrade1.Location = New System.Drawing.Point(342, 235)
         Me.btnUpgrade1.Name = "btnUpgrade1"
-        Me.btnUpgrade1.Size = New System.Drawing.Size(126, 62)
+        Me.btnUpgrade1.Size = New System.Drawing.Size(84, 41)
         Me.btnUpgrade1.TabIndex = 2
         Me.btnUpgrade1.Text = "&Upgrade: 100 clicks"
         Me.btnUpgrade1.UseVisualStyleBackColor = True
         '
         'btnRandom
         '
-        Me.btnRandom.Location = New System.Drawing.Point(512, 279)
-        Me.btnRandom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnRandom.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRandom.Location = New System.Drawing.Point(341, 186)
         Me.btnRandom.Name = "btnRandom"
-        Me.btnRandom.Size = New System.Drawing.Size(126, 70)
+        Me.btnRandom.Size = New System.Drawing.Size(84, 47)
         Me.btnRandom.TabIndex = 3
         Me.btnRandom.Text = "&Random Decor: 1000 clicks"
         Me.btnRandom.UseVisualStyleBackColor = True
@@ -85,21 +87,20 @@ Partial Class frmClicker
         '
         Me.lblDecor.AutoSize = True
         Me.lblDecor.Cursor = System.Windows.Forms.Cursors.Help
-        Me.lblDecor.Location = New System.Drawing.Point(238, 60)
-        Me.lblDecor.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblDecor.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDecor.Location = New System.Drawing.Point(159, 40)
         Me.lblDecor.Name = "lblDecor"
         Me.lblDecor.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblDecor.Size = New System.Drawing.Size(170, 20)
+        Me.lblDecor.Size = New System.Drawing.Size(122, 15)
         Me.lblDecor.TabIndex = 4
         Me.lblDecor.Text = "You got a decoration :)"
         Me.lblDecor.Visible = False
         '
         'pgbDecor1
         '
-        Me.pgbDecor1.Location = New System.Drawing.Point(26, 420)
-        Me.pgbDecor1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pgbDecor1.Location = New System.Drawing.Point(17, 280)
         Me.pgbDecor1.Name = "pgbDecor1"
-        Me.pgbDecor1.Size = New System.Drawing.Size(614, 15)
+        Me.pgbDecor1.Size = New System.Drawing.Size(409, 10)
         Me.pgbDecor1.Style = System.Windows.Forms.ProgressBarStyle.Marquee
         Me.pgbDecor1.TabIndex = 5
         Me.pgbDecor1.Visible = False
@@ -111,20 +112,20 @@ Partial Class frmClicker
         '
         'btnDev
         '
-        Me.btnDev.Location = New System.Drawing.Point(525, 14)
-        Me.btnDev.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnDev.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDev.Location = New System.Drawing.Point(350, 9)
         Me.btnDev.Name = "btnDev"
-        Me.btnDev.Size = New System.Drawing.Size(112, 34)
+        Me.btnDev.Size = New System.Drawing.Size(75, 23)
         Me.btnDev.TabIndex = 6
         Me.btnDev.Text = "Dev"
         Me.btnDev.UseVisualStyleBackColor = True
         '
         'dtpDecor2
         '
-        Me.dtpDecor2.Location = New System.Drawing.Point(26, 381)
-        Me.dtpDecor2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtpDecor2.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpDecor2.Location = New System.Drawing.Point(17, 254)
         Me.dtpDecor2.Name = "dtpDecor2"
-        Me.dtpDecor2.Size = New System.Drawing.Size(298, 26)
+        Me.dtpDecor2.Size = New System.Drawing.Size(200, 23)
         Me.dtpDecor2.TabIndex = 7
         Me.dtpDecor2.Value = New Date(2000, 1, 1, 0, 0, 0, 0)
         Me.dtpDecor2.Visible = False
@@ -132,10 +133,10 @@ Partial Class frmClicker
         'rbtDecor4
         '
         Me.rbtDecor4.AutoSize = True
-        Me.rbtDecor4.Location = New System.Drawing.Point(26, 147)
-        Me.rbtDecor4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rbtDecor4.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbtDecor4.Location = New System.Drawing.Point(17, 98)
         Me.rbtDecor4.Name = "rbtDecor4"
-        Me.rbtDecor4.Size = New System.Drawing.Size(112, 24)
+        Me.rbtDecor4.Size = New System.Drawing.Size(81, 19)
         Me.rbtDecor4.TabIndex = 11
         Me.rbtDecor4.Text = "Dark Mode"
         Me.rbtDecor4.UseVisualStyleBackColor = True
@@ -145,10 +146,10 @@ Partial Class frmClicker
         '
         Me.rbtDecor42.AutoSize = True
         Me.rbtDecor42.Checked = True
-        Me.rbtDecor42.Location = New System.Drawing.Point(26, 182)
-        Me.rbtDecor42.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rbtDecor42.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbtDecor42.Location = New System.Drawing.Point(17, 121)
         Me.rbtDecor42.Name = "rbtDecor42"
-        Me.rbtDecor42.Size = New System.Drawing.Size(113, 24)
+        Me.rbtDecor42.Size = New System.Drawing.Size(82, 19)
         Me.rbtDecor42.TabIndex = 12
         Me.rbtDecor42.TabStop = True
         Me.rbtDecor42.Text = "Light Mode"
@@ -158,10 +159,10 @@ Partial Class frmClicker
         'rbtDecor43
         '
         Me.rbtDecor43.AutoSize = True
-        Me.rbtDecor43.Location = New System.Drawing.Point(26, 216)
-        Me.rbtDecor43.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rbtDecor43.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbtDecor43.Location = New System.Drawing.Point(17, 144)
         Me.rbtDecor43.Name = "rbtDecor43"
-        Me.rbtDecor43.Size = New System.Drawing.Size(192, 24)
+        Me.rbtDecor43.Size = New System.Drawing.Size(142, 19)
         Me.rbtDecor43.TabIndex = 13
         Me.rbtDecor43.Text = "INVISIBLE MODE???"
         Me.rbtDecor43.UseVisualStyleBackColor = True
@@ -180,22 +181,31 @@ Partial Class frmClicker
         'picGlag
         '
         Me.picGlag.Image = Global.ClickerGame.My.Resources.Resources.gigglridle
-        Me.picGlag.Location = New System.Drawing.Point(26, 250)
-        Me.picGlag.Margin = New System.Windows.Forms.Padding(4)
+        Me.picGlag.Location = New System.Drawing.Point(17, 167)
         Me.picGlag.Name = "picGlag"
-        Me.picGlag.Size = New System.Drawing.Size(202, 122)
+        Me.picGlag.Size = New System.Drawing.Size(135, 81)
         Me.picGlag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picGlag.TabIndex = 14
         Me.picGlag.TabStop = False
         Me.totGlag.SetToolTip(Me.picGlag, "testing testing hai chat :))")
         Me.picGlag.Visible = False
         '
+        'txtDecor5
+        '
+        Me.txtDecor5.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
+        Me.txtDecor5.Font = New System.Drawing.Font("Wingdings 3", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
+        Me.txtDecor5.Location = New System.Drawing.Point(326, 160)
+        Me.txtDecor5.Name = "txtDecor5"
+        Me.txtDecor5.Size = New System.Drawing.Size(100, 20)
+        Me.txtDecor5.TabIndex = 15
+        '
         'frmClicker
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(144.0!, 144.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(657, 580)
+        Me.ClientSize = New System.Drawing.Size(438, 387)
+        Me.Controls.Add(Me.txtDecor5)
         Me.Controls.Add(Me.picGlag)
         Me.Controls.Add(Me.rbtDecor43)
         Me.Controls.Add(Me.rbtDecor42)
@@ -208,8 +218,10 @@ Partial Class frmClicker
         Me.Controls.Add(Me.btnUpgrade1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmClicker"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Clicker Game"
         Me.TransparencyKey = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         CType(Me.picGlag, System.ComponentModel.ISupportInitialize).EndInit()
@@ -232,4 +244,5 @@ Partial Class frmClicker
     Friend WithEvents rbtDecor43 As RadioButton
     Friend WithEvents picGlag As PictureBox
     Friend WithEvents totGlag As ToolTip
+    Friend WithEvents txtDecor5 As TextBox
 End Class
