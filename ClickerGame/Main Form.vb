@@ -101,9 +101,9 @@ Public Class frmClicker
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick ' this was for the progress bar, i DONT know how it's moving. now its for changing the glaggle message
         Dim randomnumber As Integer ' make a variable
         Dim lastnumber As Integer
-        randomnumber = Int((10 * Rnd()) + 1)
+        randomnumber = Int((11 * Rnd()) + 1)
         While lastnumber = randomnumber
-            randomnumber = Int((10 * Rnd()) + 1)
+            randomnumber = Int((11 * Rnd()) + 1)
         End While
         If randomnumber = 1 Then
             Dim myToolTipText = "hai!!!!!! :)"
@@ -136,10 +136,17 @@ Public Class frmClicker
             Dim myToolTipText = "..."
             totGlag.SetToolTip(Me.picGlag, myToolTipText)
         ElseIf randomnumber = 11 Then
-            Dim myToolTipText = "the fog is coming. there is nowhere to run or hide. Accept it. Accept DEATH. ONLY DEATH TRULY AWAITS YOU" ' do not
+            randomnumber = Int((2 * Rnd()) + 1)
+            Dim myToolTipText = "This game is so boring, look what I can do !!!!" ' do not
+            If randomnumber = 1 Then
+                picGlag.Image = My.Resources.gigglridle
+            ElseIf randomnumber = 2 Then
+                picGlag.Image = My.Resources.gigglrwave
+            End If
+        picGlag.Image = My.Resources.gigglridle
             totGlag.SetToolTip(Me.picGlag, myToolTipText)
         End If
-        lastnumber = randomnumber
+            lastnumber = randomnumber
     End Sub
 
     Private Sub btnDev_Click(sender As Object, e As EventArgs) Handles btnDev.Click ' ez dev button

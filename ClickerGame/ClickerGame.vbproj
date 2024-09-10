@@ -124,5 +124,20 @@
   <ItemGroup>
     <None Include="Resources\gigglr_prev_ui %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\glaggleidle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gigglridle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gigglrwave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
