@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmClicker
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmClicker
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmClicker))
@@ -37,8 +37,8 @@ Partial Class frmClicker
         Me.rbtDecor42 = New System.Windows.Forms.RadioButton()
         Me.rbtDecor43 = New System.Windows.Forms.RadioButton()
         Me.totGlag = New System.Windows.Forms.ToolTip(Me.components)
-        Me.picGlag = New System.Windows.Forms.PictureBox()
         Me.txtDecor5 = New System.Windows.Forms.TextBox()
+        Me.picGlag = New System.Windows.Forms.PictureBox()
         CType(Me.picGlag, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -178,6 +178,15 @@ Partial Class frmClicker
         Me.totGlag.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         Me.totGlag.ToolTipTitle = "Glag Says:"
         '
+        'txtDecor5
+        '
+        Me.txtDecor5.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
+        Me.txtDecor5.Font = New System.Drawing.Font("Wingdings 3", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
+        Me.txtDecor5.Location = New System.Drawing.Point(326, 160)
+        Me.txtDecor5.Name = "txtDecor5"
+        Me.txtDecor5.Size = New System.Drawing.Size(100, 20)
+        Me.txtDecor5.TabIndex = 15
+        '
         'picGlag
         '
         Me.picGlag.Image = Global.ClickerGame.My.Resources.Resources.gigglridle
@@ -189,15 +198,6 @@ Partial Class frmClicker
         Me.picGlag.TabStop = False
         Me.totGlag.SetToolTip(Me.picGlag, "testing testing hai chat :))")
         Me.picGlag.Visible = False
-        '
-        'txtDecor5
-        '
-        Me.txtDecor5.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
-        Me.txtDecor5.Font = New System.Drawing.Font("Wingdings 3", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
-        Me.txtDecor5.Location = New System.Drawing.Point(326, 160)
-        Me.txtDecor5.Name = "txtDecor5"
-        Me.txtDecor5.Size = New System.Drawing.Size(100, 20)
-        Me.txtDecor5.TabIndex = 15
         '
         'frmClicker
         '
@@ -220,6 +220,8 @@ Partial Class frmClicker
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(454, 426)
+        Me.MinimumSize = New System.Drawing.Size(454, 426)
         Me.Name = "frmClicker"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Clicker Game"

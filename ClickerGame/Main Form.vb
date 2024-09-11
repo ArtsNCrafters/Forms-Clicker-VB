@@ -174,7 +174,7 @@ Public Class frmClicker
 
     Private Sub txtDecor5_TextChanged(sender As Object, e As EventArgs) Handles txtDecor5.TextChanged
         If txtDecor5.Text = "clicker" Then
-            txtDecor5.Visible = False
+            txtDecor5.Text = ""
         End If
     End Sub
 End Class
