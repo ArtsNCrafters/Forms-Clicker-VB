@@ -75,11 +75,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Main Form.vb">
+    <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main Form.Designer.vb">
-      <DependentUpon>Main Form.vb</DependentUpon>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -105,8 +105,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Main Form.resx">
-      <DependentUpon>Main Form.vb</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -156,6 +156,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\book icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\talkingposefull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rich bean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scpArtsisnotokay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scpBean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scpBlu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scpCantaloupe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scpCantaloupoxian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scpFIREINTHEHOLE.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scpOermer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scpProtip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scpSwag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scpTalkingArts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scpUnnamed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spcDuckn%27t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagenotfound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ihaveanimportantmessageforyou-ezgif.com-video-to-gif-converter.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ihaveanimportantmessageforyou-ezgif.com-added-text.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

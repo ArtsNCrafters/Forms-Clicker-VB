@@ -9,6 +9,8 @@ Public Class frmClicker
     Dim message As String = "&Upgrade: "
     Dim message2 As String = " clicks"
     Dim message3 As String = "&Random Decor: "
+    Dim message4 As String = "current click modifier: "
+    Dim message5 As String = "current autoclick modifier: "
     Dim tempmessage As String = "temp"
     Dim bool As Boolean = True 'this could probably be deleted ngl
     Dim Black As Color = Color.FromArgb(255, 50, 50, 50)
@@ -37,6 +39,10 @@ Public Class frmClicker
             btnUpgrade1.Text = tempmessage ' set the text
             tempmessage = (message3 + CStr(1000 + modifier) + message2).ToString ' update the decor price (it's affected by the modifier)
             btnRandom.Text = tempmessage ' set the text
+            tempmessage = (message4 + CStr(clicks)).ToString
+            lblclicksamount.Text = tempmessage
+            tempmessage = (message5 + CStr((clicks / 2))).ToString
+            lblautclcmod.Text = tempmessage
             pgbDecor1.Value = pgbDecor1.Value + 1 'the code below is for a dynamic decor
             If pgbDecor1.Value = 100 Then
                 pgbDecor1.Value = 0
@@ -189,15 +195,20 @@ Public Class frmClicker
 
         Me.BackColor = Black
         Me.Opacity = 1
+        ScrapbookForm.Opacity = 1
+        ScrapbookForm.BackColor = Black
     End Sub
 
     Private Sub rbtDecor42_CheckedChanged(sender As Object, e As EventArgs) Handles rbtDecor42.CheckedChanged 
         Me.BackColor = Control
         Me.Opacity = 1
+        ScrapbookForm.BackColor = Control
+        ScrapbookForm.Opacity = 1
     End Sub
 
     Private Sub rbtDecor43_CheckedChanged(sender As Object, e As EventArgs) Handles rbtDecor43.CheckedChanged ' makes the form transparent lol
         Me.Opacity = 0.5
+        ScrapbookForm.Opacity = 0.5
     End Sub
 
     Private Sub mtbDecor5_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs)
@@ -211,9 +222,26 @@ Public Class frmClicker
             progress = progress + 1
             hints = False
         End If
+        If txtDecor5.Text = "upgrade" Then
+            txtDecor5.Text = ""
+            lblDecor.Text = "you know you can resize the page, right? do that."
+            piculcok.Visible = False
+        End If
     End Sub
 
     Private Sub picBook_Click(sender As Object, e As EventArgs) Handles picBook.Click
         ScrapbookForm.Visible = True
+    End Sub
+
+    Private Sub btnAuto_Click(sender As Object, e As EventArgs) Handles btnAuto.Click
+        If Label1.Text >= 50000 Then
+            Autoclick.Enabled = True
+            btnAuto.Text = "Pay your respects: 50,000 clicks"
+            Label1.Text = Label1.Text - 50000
+        End If
+    End Sub
+
+    Private Sub Autoclick_Tick(sender As Object, e As EventArgs) Handles Autoclick.Tick
+        Label1.Text = Label1.Text + (clicks / 2)
     End Sub
 End Class
