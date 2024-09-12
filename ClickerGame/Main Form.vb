@@ -15,6 +15,8 @@ Public Class frmClicker
     Dim Control As Color = Color.FromArgb(255, 233, 233, 233)
     Dim Transparent As Color = Color.FromArgb(0, 0, 0, 0)
     Dim glagmessage As String = "Hello Guys"
+    Dim hints As Boolean = False
+    Dim progress As Integer = 0
 
     ' tempmessage = (CInt(message) + 1 + CInt(message2)).ToString
     ' the temp message is for combining strings and integers
@@ -46,7 +48,7 @@ Public Class frmClicker
         If Label1.Text >= 1000 + (modifier) Then ' if its >= 1000 plus modifier
             Label1.Text = Label1.Text - (1000 + modifier) ' subtract it
             Dim randomnumber As Integer ' make a variable
-            randomnumber = Int((4 * Rnd()) + 1) ' make it pick from 1 to 4 (for some reason it isn't truly random yet)
+            randomnumber = Int((5 * Rnd()) + 1) ' make it pick from 1 to 4 (for some reason it isn't truly random yet)
             If randomnumber = 1 Then 'if its 1 then
                 If pgbDecor1.Visible = False Then ' if it isnt visible then
                     pgbDecor1.Visible = True ' show it
@@ -69,6 +71,7 @@ Public Class frmClicker
                     lblDecor.Visible = True
                     totGlag.Active = True
                     lblDecor.Text = "You got a... SILLY GLAGGLE???? :O"
+                    progress = progress + 1
                 Else
                     lblDecor.Text = "Aw, it was a duplicate glaggle :("
                 End If
@@ -81,6 +84,19 @@ Public Class frmClicker
                     lblDecor.Text = "You got a background changer :)"
                 Else
                     lblDecor.Text = "Aw, it was a duplicate background changer :("
+                End If
+            ElseIf randomnumber = 5 Then ' funny
+                If txtDecor5.Visible = False Then
+                    txtDecor5.Visible = True
+                    lblDecor.Visible = True
+                    lblDecor.Text = "You got a mysterious password :O"
+                    progress = progress + 1
+                Else
+                    lblDecor.Text = "you got a duplicate. if you want some codes, gigglr has some."
+                    If progress < 3 Then
+                        hints = True
+                    End If
+
                 End If
             End If
             modifier = modifier + 10
@@ -98,10 +114,13 @@ Public Class frmClicker
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick ' this was for the progress bar, i DONT know how it's moving. now its for changing the glaggle message
         Dim randomnumber As Integer ' make a variable
         Dim lastnumber As Integer
-        randomnumber = Int((11 * Rnd()) + 1)
-        While lastnumber = randomnumber
+        If hints = False Then
             randomnumber = Int((11 * Rnd()) + 1)
-        End While
+        Else
+            randomnumber = Int((15 * Rnd()) + 1)
+        End If
+
+
         If randomnumber = 1 Then
             Dim myToolTipText = "hai!!!!!! :)"
             totGlag.SetToolTip(Me.picGlag, myToolTipText)
@@ -130,7 +149,7 @@ Public Class frmClicker
             Dim myToolTipText = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
             totGlag.SetToolTip(Me.picGlag, myToolTipText)
         ElseIf randomnumber = 10 Then
-            Dim myToolTipText = "..."
+            Dim myToolTipText = ":]"
             totGlag.SetToolTip(Me.picGlag, myToolTipText)
         ElseIf randomnumber = 11 Then
             randomnumber = Int((2 * Rnd()) + 1)
@@ -140,7 +159,20 @@ Public Class frmClicker
             ElseIf randomnumber = 2 Then
                 picGlag.Image = My.Resources.gigglrwave
             End If
-        picGlag.Image = My.Resources.gigglridle
+            totGlag.SetToolTip(Me.picGlag, myToolTipText)
+        ElseIf randomnumber = 12 Then
+            Dim myToolTipText = "You lookin for a password? It's REALLY easy."
+            totGlag.SetToolTip(Me.picGlag, myToolTipText)
+        ElseIf randomnumber = 13 Then
+            Dim myToolTipText = "This is such a cool CLICKER game i'm in, don't you think?"
+            totGlag.SetToolTip(Me.picGlag, myToolTipText)
+            myToolTipText = "dude. ITS ACTUALLY SO EASY JUST DO IT ALREADY"
+            totGlag.SetToolTip(Me.txtDecor5, myToolTipText)
+        ElseIf randomnumber = 14 Then
+            Dim myToolTipText = "to be honest, you could so easily look in the source code to find anything. IT'S REALLY NOT THAT HARD!!!!"
+            totGlag.SetToolTip(Me.picGlag, myToolTipText)
+        ElseIf randomnumber = 15 Then
+            Dim myToolTipText = "..."
             totGlag.SetToolTip(Me.picGlag, myToolTipText)
         End If
             lastnumber = randomnumber
@@ -172,9 +204,16 @@ Public Class frmClicker
 
     End Sub
 
-    Private Sub txtDecor5_TextChanged(sender As Object, e As EventArgs) Handles txtDecor5.TextChanged
+    Private Sub txtDecor5_TextChanged(sender As Object, e As EventArgs) Handles txtDecor5.TextChanged ' JUST LOOK HERE!! ALL THE PASSWORDS ARE HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         If txtDecor5.Text = "clicker" Then
             txtDecor5.Text = ""
+            picBook.Visible = True
+            progress = progress + 1
+            hints = False
         End If
+    End Sub
+
+    Private Sub picBook_Click(sender As Object, e As EventArgs) Handles picBook.Click
+        ScrapbookForm.Visible = True
     End Sub
 End Class

@@ -38,7 +38,9 @@ Partial Class frmClicker
         Me.rbtDecor43 = New System.Windows.Forms.RadioButton()
         Me.totGlag = New System.Windows.Forms.ToolTip(Me.components)
         Me.txtDecor5 = New System.Windows.Forms.TextBox()
+        Me.picBook = New System.Windows.Forms.PictureBox()
         Me.picGlag = New System.Windows.Forms.PictureBox()
+        CType(Me.picBook, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picGlag, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -85,13 +87,13 @@ Partial Class frmClicker
         '
         'lblDecor
         '
-        Me.lblDecor.AutoSize = True
+        Me.lblDecor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblDecor.Cursor = System.Windows.Forms.Cursors.Help
         Me.lblDecor.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDecor.Location = New System.Drawing.Point(159, 40)
+        Me.lblDecor.Location = New System.Drawing.Point(18, 44)
         Me.lblDecor.Name = "lblDecor"
         Me.lblDecor.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblDecor.Size = New System.Drawing.Size(122, 15)
+        Me.lblDecor.Size = New System.Drawing.Size(122, 51)
         Me.lblDecor.TabIndex = 4
         Me.lblDecor.Text = "You got a decoration :)"
         Me.lblDecor.Visible = False
@@ -186,6 +188,19 @@ Partial Class frmClicker
         Me.txtDecor5.Name = "txtDecor5"
         Me.txtDecor5.Size = New System.Drawing.Size(100, 20)
         Me.txtDecor5.TabIndex = 15
+        Me.txtDecor5.Visible = False
+        '
+        'picBook
+        '
+        Me.picBook.Image = Global.ClickerGame.My.Resources.Resources.book_icon
+        Me.picBook.Location = New System.Drawing.Point(326, 40)
+        Me.picBook.Name = "picBook"
+        Me.picBook.Size = New System.Drawing.Size(100, 100)
+        Me.picBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.picBook.TabIndex = 16
+        Me.picBook.TabStop = False
+        Me.totGlag.SetToolTip(Me.picBook, "woah, you found my scrapbook! open it if you want.")
+        Me.picBook.Visible = False
         '
         'picGlag
         '
@@ -205,6 +220,7 @@ Partial Class frmClicker
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(438, 387)
+        Me.Controls.Add(Me.picBook)
         Me.Controls.Add(Me.txtDecor5)
         Me.Controls.Add(Me.picGlag)
         Me.Controls.Add(Me.rbtDecor43)
@@ -226,6 +242,7 @@ Partial Class frmClicker
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Clicker Game"
         Me.TransparencyKey = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        CType(Me.picBook, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picGlag, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -247,4 +264,5 @@ Partial Class frmClicker
     Friend WithEvents picGlag As PictureBox
     Friend WithEvents totGlag As ToolTip
     Friend WithEvents txtDecor5 As TextBox
+    Friend WithEvents picBook As PictureBox
 End Class

@@ -154,5 +154,8 @@
   <ItemGroup>
     <None Include="Resources\scrapbookicon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
