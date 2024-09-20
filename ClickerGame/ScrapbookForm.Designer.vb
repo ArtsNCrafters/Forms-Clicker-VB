@@ -59,9 +59,9 @@ Partial Class ScrapbookForm
         '
         'ScrapbookForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 24.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(432, 370)
+        Me.ClientSize = New System.Drawing.Size(438, 387)
         Me.Controls.Add(Me.picScrapbook)
         Me.Controls.Add(Me.btnRight)
         Me.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

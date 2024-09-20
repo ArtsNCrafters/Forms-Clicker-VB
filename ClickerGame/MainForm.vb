@@ -3,8 +3,8 @@
 ' Alright :) -Arts
 Public Class frmClicker
     'Sets up variables for clicks, modifier, button text, and colors
-    Dim clicks As Integer = 1
-    Dim modifier As Integer = 0
+    Dim clicks As Double = 1
+    Dim modifier As Double = 0
     Dim decormod As Integer = 0
     Dim message As String = "&Upgrade: "
     Dim message2 As String = " clicks"
@@ -41,7 +41,7 @@ Public Class frmClicker
             btnRandom.Text = tempmessage ' set the text
             tempmessage = (message4 + CStr(clicks)).ToString
             lblclicksamount.Text = tempmessage
-            tempmessage = (message5 + CStr((clicks / 2))).ToString
+            tempmessage = (message5 + CStr((clicks \ 2))).ToString
             lblautclcmod.Text = tempmessage
             pgbDecor1.Value = pgbDecor1.Value + 1 'the code below is for a dynamic decor
             If pgbDecor1.Value = 100 Then
@@ -158,12 +158,14 @@ Public Class frmClicker
             Dim myToolTipText = ":]"
             totGlag.SetToolTip(Me.picGlag, myToolTipText)
         ElseIf randomnumber = 11 Then
-            randomnumber = Int((2 * Rnd()) + 1)
+            randomnumber = Int((3 * Rnd()) + 1)
             Dim myToolTipText = "This game is so boring, look what I can do !!!!" ' do not
             If randomnumber = 1 Then
                 picGlag.Image = My.Resources.gigglridle
             ElseIf randomnumber = 2 Then
                 picGlag.Image = My.Resources.gigglrwave
+            ElseIf randomnumber = 3 Then
+                picGlag.Image = My.Resources.gigglr_prev_ui__1_
             End If
             totGlag.SetToolTip(Me.picGlag, myToolTipText)
         ElseIf randomnumber = 12 Then
@@ -185,8 +187,12 @@ Public Class frmClicker
     End Sub
 
     Private Sub btnDev_Click(sender As Object, e As EventArgs) Handles btnDev.Click ' ez dev button
-        clicks = 1000
+        clicks = clicks + Label1.Text
         Label1.Text = Label1.Text + clicks
+        tempmessage = (message4 + CStr(clicks)).ToString
+        lblclicksamount.Text = tempmessage
+        tempmessage = (message5 + CStr((clicks \ 2))).ToString
+        lblautclcmod.Text = tempmessage
     End Sub
 
 
@@ -224,7 +230,7 @@ Public Class frmClicker
         End If
         If txtDecor5.Text = "upgrade" Then
             txtDecor5.Text = ""
-            lblDecor.Text = "you know you can resize the page, right? do that."
+            lblDecor.Text = "you know you can resize the page to the right, right? do that."
             piculcok.Visible = False
         End If
     End Sub
@@ -242,6 +248,6 @@ Public Class frmClicker
     End Sub
 
     Private Sub Autoclick_Tick(sender As Object, e As EventArgs) Handles Autoclick.Tick
-        Label1.Text = Label1.Text + (clicks / 2)
+        Label1.Text = Label1.Text + (clicks \ 2)
     End Sub
 End Class

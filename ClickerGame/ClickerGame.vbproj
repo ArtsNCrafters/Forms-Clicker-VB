@@ -208,5 +208,11 @@
   <ItemGroup>
     <None Include="Resources\ihaveanimportantmessageforyou-ezgif.com-added-text.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scpPicture1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scpPicture2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
