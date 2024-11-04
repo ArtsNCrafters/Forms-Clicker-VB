@@ -37,6 +37,8 @@ Partial Class frmClicker
         Me.rbtDecor42 = New System.Windows.Forms.RadioButton()
         Me.rbtDecor43 = New System.Windows.Forms.RadioButton()
         Me.totGlag = New System.Windows.Forms.ToolTip(Me.components)
+        Me.picBook = New System.Windows.Forms.PictureBox()
+        Me.picGlag = New System.Windows.Forms.PictureBox()
         Me.txtDecor5 = New System.Windows.Forms.TextBox()
         Me.Autoclick = New System.Windows.Forms.Timer(Me.components)
         Me.btnAuto = New System.Windows.Forms.Button()
@@ -44,11 +46,9 @@ Partial Class frmClicker
         Me.lblclicksamount = New System.Windows.Forms.Label()
         Me.lblautclcmod = New System.Windows.Forms.Label()
         Me.piculcok = New System.Windows.Forms.PictureBox()
-        Me.picBook = New System.Windows.Forms.PictureBox()
-        Me.picGlag = New System.Windows.Forms.PictureBox()
-        CType(Me.piculcok, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picBook, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picGlag, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.piculcok, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -188,6 +188,30 @@ Partial Class frmClicker
         Me.totGlag.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         Me.totGlag.ToolTipTitle = "Glag Says:"
         '
+        'picBook
+        '
+        Me.picBook.Image = Global.ClickerGame.My.Resources.Resources.book_icon
+        Me.picBook.Location = New System.Drawing.Point(326, 40)
+        Me.picBook.Name = "picBook"
+        Me.picBook.Size = New System.Drawing.Size(100, 100)
+        Me.picBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.picBook.TabIndex = 16
+        Me.picBook.TabStop = False
+        Me.totGlag.SetToolTip(Me.picBook, "woah, you found my scrapbook! open it if you want.")
+        Me.picBook.Visible = False
+        '
+        'picGlag
+        '
+        Me.picGlag.Image = Global.ClickerGame.My.Resources.Resources.gigglridle
+        Me.picGlag.Location = New System.Drawing.Point(17, 167)
+        Me.picGlag.Name = "picGlag"
+        Me.picGlag.Size = New System.Drawing.Size(135, 81)
+        Me.picGlag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picGlag.TabIndex = 14
+        Me.picGlag.TabStop = False
+        Me.totGlag.SetToolTip(Me.picGlag, "testing testing hai chat :))")
+        Me.picGlag.Visible = False
+        '
         'txtDecor5
         '
         Me.txtDecor5.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
@@ -205,10 +229,10 @@ Partial Class frmClicker
         'btnAuto
         '
         Me.btnAuto.Font = New System.Drawing.Font("Comic Sans MS", 9.0!)
-        Me.btnAuto.Location = New System.Drawing.Point(776, 296)
-        Me.btnAuto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnAuto.Location = New System.Drawing.Point(696, 296)
+        Me.btnAuto.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAuto.Name = "btnAuto"
-        Me.btnAuto.Size = New System.Drawing.Size(95, 66)
+        Me.btnAuto.Size = New System.Drawing.Size(175, 66)
         Me.btnAuto.TabIndex = 17
         Me.btnAuto.Text = "Autoclicker: 50,000 clicks"
         Me.btnAuto.UseVisualStyleBackColor = True
@@ -252,7 +276,7 @@ Partial Class frmClicker
         'piculcok
         '
         Me.piculcok.Image = Global.ClickerGame.My.Resources.Resources.ihaveanimportantmessageforyou_ezgif_com_added_text
-        Me.piculcok.Location = New System.Drawing.Point(444, 0)
+        Me.piculcok.Location = New System.Drawing.Point(123, 370)
         Me.piculcok.Margin = New System.Windows.Forms.Padding(2)
         Me.piculcok.Name = "piculcok"
         Me.piculcok.Size = New System.Drawing.Size(447, 384)
@@ -260,36 +284,12 @@ Partial Class frmClicker
         Me.piculcok.TabIndex = 21
         Me.piculcok.TabStop = False
         '
-        'picBook
-        '
-        Me.picBook.Image = Global.ClickerGame.My.Resources.Resources.book_icon
-        Me.picBook.Location = New System.Drawing.Point(326, 40)
-        Me.picBook.Name = "picBook"
-        Me.picBook.Size = New System.Drawing.Size(100, 100)
-        Me.picBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.picBook.TabIndex = 16
-        Me.picBook.TabStop = False
-        Me.totGlag.SetToolTip(Me.picBook, "woah, you found my scrapbook! open it if you want.")
-        Me.picBook.Visible = False
-        '
-        'picGlag
-        '
-        Me.picGlag.Image = Global.ClickerGame.My.Resources.Resources.gigglridle
-        Me.picGlag.Location = New System.Drawing.Point(17, 167)
-        Me.picGlag.Name = "picGlag"
-        Me.picGlag.Size = New System.Drawing.Size(135, 81)
-        Me.picGlag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picGlag.TabIndex = 14
-        Me.picGlag.TabStop = False
-        Me.totGlag.SetToolTip(Me.picGlag, "testing testing hai chat :))")
-        Me.picGlag.Visible = False
-        '
         'frmClicker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(436, 381)
+        Me.ClientSize = New System.Drawing.Size(883, 381)
         Me.Controls.Add(Me.piculcok)
         Me.Controls.Add(Me.lblautclcmod)
         Me.Controls.Add(Me.lblclicksamount)
@@ -317,9 +317,9 @@ Partial Class frmClicker
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Clicker Game"
         Me.TransparencyKey = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        CType(Me.piculcok, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picBook, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picGlag, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.piculcok, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

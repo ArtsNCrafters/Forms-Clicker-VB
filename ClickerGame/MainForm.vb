@@ -23,7 +23,7 @@ Public Class frmClicker
     ' tempmessage = (CInt(message) + 1 + CInt(message2)).ToString
     ' the temp message is for combining strings and integers
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click ' on click
-        Label1.Text = Label1.Text + clicks ' add the clicks value to the label (clicks can be changed by the upgrade)
+        Label1.Text += clicks ' add the clicks value to the label (clicks can be changed by the upgrade)
         pgbDecor1.Value = pgbDecor1.Value + 1 'the code below is for a dynamic decor
         If pgbDecor1.Value = 100 Then
             pgbDecor1.Value = 0
@@ -32,10 +32,10 @@ Public Class frmClicker
 
     Private Sub btnUpgrade1_Click(sender As Object, e As EventArgs) Handles btnUpgrade1.Click ' this is for upgrades
         If Label1.Text >= 100 + modifier Then ' if the label has a value greater than or equal to (100 + modifier) then
-            Label1.Text = Label1.Text - (100 + modifier) ' remove (100 + modifier) from the label
-            clicks = clicks + 1 ' change clicks abount by 1 (E.X. instead of clicking to get 1 point, you click to get 2)
+            Label1.Text -= (100 + modifier) ' remove (100 + modifier) from the label
+            clicks += 1 ' change clicks abount by 1 (E.X. instead of clicking to get 1 point, you click to get 2)
             modifier = modifier + 50 ' make it more expensive to buy again
-            tempmessage = (message + CStr(100 + modifier) + message2).ToString ' combine the messages to make a string that will match the price
+            tempmessage = message & (100 + modifier).ToString & message2 ' combine the messages to make a string that will match the price
             btnUpgrade1.Text = tempmessage ' set the text
             tempmessage = (message3 + CStr(1000 + modifier) + message2).ToString ' update the decor price (it's affected by the modifier)
             btnRandom.Text = tempmessage ' set the text
@@ -43,7 +43,7 @@ Public Class frmClicker
             lblclicksamount.Text = tempmessage
             tempmessage = (message5 + CStr((clicks \ 2))).ToString
             lblautclcmod.Text = tempmessage
-            pgbDecor1.Value = pgbDecor1.Value + 1 'the code below is for a dynamic decor
+            pgbDecor1.Value += 1 'the code below is for a dynamic decor
             If pgbDecor1.Value = 100 Then
                 pgbDecor1.Value = 0
             End If
