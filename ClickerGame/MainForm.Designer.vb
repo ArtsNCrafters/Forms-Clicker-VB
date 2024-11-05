@@ -46,6 +46,10 @@ Partial Class frmClicker
         Me.lblclicksamount = New System.Windows.Forms.Label()
         Me.lblautclcmod = New System.Windows.Forms.Label()
         Me.piculcok = New System.Windows.Forms.PictureBox()
+        Me.btnAutoToggle = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.rbgtimertest = New System.Windows.Forms.Timer(Me.components)
+        Me.btngaymermode = New System.Windows.Forms.Button()
         CType(Me.picBook, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picGlag, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.piculcok, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -235,6 +239,7 @@ Partial Class frmClicker
         Me.btnAuto.Size = New System.Drawing.Size(175, 66)
         Me.btnAuto.TabIndex = 17
         Me.btnAuto.Text = "Autoclicker: 50,000 clicks"
+        Me.totGlag.SetToolTip(Me.btnAuto, "holy moly!!! this is a bit overpowered, but its epic :]]]")
         Me.btnAuto.UseVisualStyleBackColor = True
         '
         'Label2
@@ -276,13 +281,54 @@ Partial Class frmClicker
         'piculcok
         '
         Me.piculcok.Image = Global.ClickerGame.My.Resources.Resources.ihaveanimportantmessageforyou_ezgif_com_added_text
-        Me.piculcok.Location = New System.Drawing.Point(123, 370)
+        Me.piculcok.Location = New System.Drawing.Point(444, -9)
         Me.piculcok.Margin = New System.Windows.Forms.Padding(2)
         Me.piculcok.Name = "piculcok"
-        Me.piculcok.Size = New System.Drawing.Size(447, 384)
+        Me.piculcok.Size = New System.Drawing.Size(439, 394)
         Me.piculcok.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.piculcok.TabIndex = 21
         Me.piculcok.TabStop = False
+        '
+        'btnAutoToggle
+        '
+        Me.btnAutoToggle.Font = New System.Drawing.Font("Comic Sans MS", 9.0!)
+        Me.btnAutoToggle.Location = New System.Drawing.Point(634, 338)
+        Me.btnAutoToggle.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnAutoToggle.Name = "btnAutoToggle"
+        Me.btnAutoToggle.Size = New System.Drawing.Size(58, 24)
+        Me.btnAutoToggle.TabIndex = 22
+        Me.btnAutoToggle.Text = "toggle"
+        Me.totGlag.SetToolTip(Me.btnAutoToggle, "toggle if u want :)")
+        Me.btnAutoToggle.UseVisualStyleBackColor = True
+        Me.btnAutoToggle.Visible = False
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(787, 213)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(84, 82)
+        Me.Button2.TabIndex = 23
+        Me.Button2.Text = "Max Upgrade (WILL LAG GAME FOR A BIT)"
+        Me.totGlag.SetToolTip(Me.Button2, "yeah... uh.... it lags the game. it wont crash it though!")
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'rbgtimertest
+        '
+        Me.rbgtimertest.Interval = 1
+        '
+        'btngaymermode
+        '
+        Me.btngaymermode.Font = New System.Drawing.Font("Comic Sans MS", 9.0!)
+        Me.btngaymermode.Location = New System.Drawing.Point(741, 184)
+        Me.btngaymermode.Margin = New System.Windows.Forms.Padding(2)
+        Me.btngaymermode.Name = "btngaymermode"
+        Me.btngaymermode.Size = New System.Drawing.Size(131, 24)
+        Me.btngaymermode.TabIndex = 24
+        Me.btngaymermode.Text = "silly gamer mode"
+        Me.totGlag.SetToolTip(Me.btngaymermode, "gaming :O")
+        Me.btngaymermode.UseVisualStyleBackColor = True
+        Me.btngaymermode.Visible = False
         '
         'frmClicker
         '
@@ -291,6 +337,9 @@ Partial Class frmClicker
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(883, 381)
         Me.Controls.Add(Me.piculcok)
+        Me.Controls.Add(Me.btngaymermode)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnAutoToggle)
         Me.Controls.Add(Me.lblautclcmod)
         Me.Controls.Add(Me.lblclicksamount)
         Me.Controls.Add(Me.Label2)
@@ -347,4 +396,8 @@ Partial Class frmClicker
     Friend WithEvents lblclicksamount As Label
     Friend WithEvents lblautclcmod As Label
     Friend WithEvents piculcok As PictureBox
+    Friend WithEvents btnAutoToggle As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents rbgtimertest As Timer
+    Friend WithEvents btngaymermode As Button
 End Class
