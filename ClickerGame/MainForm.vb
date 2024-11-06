@@ -279,6 +279,10 @@ Public Class frmClicker
                 Autoclick.Interval *= 0.9
             End If
         End If
+        If AutoclickMultiplier >= 900000 Then
+            btngaymermode.Enabled = True
+            btngaymermode.Visible = True
+        End If
     End Sub
 
     Private Sub Autoclick_Tick(sender As Object, e As EventArgs) Handles Autoclick.Tick
@@ -314,5 +318,26 @@ Public Class frmClicker
         lblclicksamount.Text = tempmessage
         tempmessage = message5 & (clicks \ 2).ToString
         lblautclcmod.Text = tempmessage
+    End Sub
+    Private funny As Integer
+    Private Sub btngaymermode_Click(sender As Object, e As EventArgs) Handles btngaymermode.Click
+        PictureBox1.Visible = True
+        Dim yes As Integer = 1
+        Me.Size = MinimumSize
+        animationtimer.Enabled = True
+        funny = 0
+        Do Until funny = 100
+
+        Loop
+        Me.Text = "I have bricked your game. there is no escape (until I add data saving)"
+        Me.Icon = ScrapbookForm.Icon
+        Do Until yes = 0
+
+        Loop
+        Me.Close()
+    End Sub
+
+    Private Sub rbgtimertest_Tick(sender As Object, e As EventArgs) Handles animationtimer.Tick
+        funny += 1
     End Sub
 End Class

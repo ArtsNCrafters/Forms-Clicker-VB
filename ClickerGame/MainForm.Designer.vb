@@ -37,22 +37,24 @@ Partial Class frmClicker
         Me.rbtDecor42 = New System.Windows.Forms.RadioButton()
         Me.rbtDecor43 = New System.Windows.Forms.RadioButton()
         Me.totGlag = New System.Windows.Forms.ToolTip(Me.components)
-        Me.picBook = New System.Windows.Forms.PictureBox()
-        Me.picGlag = New System.Windows.Forms.PictureBox()
+        Me.btnAuto = New System.Windows.Forms.Button()
+        Me.btnAutoToggle = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btngaymermode = New System.Windows.Forms.Button()
         Me.txtDecor5 = New System.Windows.Forms.TextBox()
         Me.Autoclick = New System.Windows.Forms.Timer(Me.components)
-        Me.btnAuto = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblclicksamount = New System.Windows.Forms.Label()
         Me.lblautclcmod = New System.Windows.Forms.Label()
+        Me.animationtimer = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.piculcok = New System.Windows.Forms.PictureBox()
-        Me.btnAutoToggle = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.rbgtimertest = New System.Windows.Forms.Timer(Me.components)
-        Me.btngaymermode = New System.Windows.Forms.Button()
+        Me.picBook = New System.Windows.Forms.PictureBox()
+        Me.picGlag = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.piculcok, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picBook, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picGlag, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.piculcok, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -192,29 +194,55 @@ Partial Class frmClicker
         Me.totGlag.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         Me.totGlag.ToolTipTitle = "Glag Says:"
         '
-        'picBook
+        'btnAuto
         '
-        Me.picBook.Image = Global.ClickerGame.My.Resources.Resources.book_icon
-        Me.picBook.Location = New System.Drawing.Point(326, 40)
-        Me.picBook.Name = "picBook"
-        Me.picBook.Size = New System.Drawing.Size(100, 100)
-        Me.picBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.picBook.TabIndex = 16
-        Me.picBook.TabStop = False
-        Me.totGlag.SetToolTip(Me.picBook, "woah, you found my scrapbook! open it if you want.")
-        Me.picBook.Visible = False
+        Me.btnAuto.Font = New System.Drawing.Font("Comic Sans MS", 9.0!)
+        Me.btnAuto.Location = New System.Drawing.Point(696, 296)
+        Me.btnAuto.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnAuto.Name = "btnAuto"
+        Me.btnAuto.Size = New System.Drawing.Size(175, 66)
+        Me.btnAuto.TabIndex = 17
+        Me.btnAuto.Text = "Autoclicker: 50,000 clicks"
+        Me.totGlag.SetToolTip(Me.btnAuto, "holy moly!!! this is a bit overpowered, but its epic :]]]")
+        Me.btnAuto.UseVisualStyleBackColor = True
         '
-        'picGlag
+        'btnAutoToggle
         '
-        Me.picGlag.Image = Global.ClickerGame.My.Resources.Resources.gigglridle
-        Me.picGlag.Location = New System.Drawing.Point(17, 167)
-        Me.picGlag.Name = "picGlag"
-        Me.picGlag.Size = New System.Drawing.Size(135, 81)
-        Me.picGlag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picGlag.TabIndex = 14
-        Me.picGlag.TabStop = False
-        Me.totGlag.SetToolTip(Me.picGlag, "testing testing hai chat :))")
-        Me.picGlag.Visible = False
+        Me.btnAutoToggle.Font = New System.Drawing.Font("Comic Sans MS", 9.0!)
+        Me.btnAutoToggle.Location = New System.Drawing.Point(634, 338)
+        Me.btnAutoToggle.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnAutoToggle.Name = "btnAutoToggle"
+        Me.btnAutoToggle.Size = New System.Drawing.Size(58, 24)
+        Me.btnAutoToggle.TabIndex = 22
+        Me.btnAutoToggle.Text = "toggle"
+        Me.totGlag.SetToolTip(Me.btnAutoToggle, "toggle if u want :)")
+        Me.btnAutoToggle.UseVisualStyleBackColor = True
+        Me.btnAutoToggle.Visible = False
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(787, 213)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(84, 82)
+        Me.Button2.TabIndex = 23
+        Me.Button2.Text = "Max Upgrade (WILL LAG GAME FOR A BIT)"
+        Me.totGlag.SetToolTip(Me.Button2, "yeah... uh.... it lags the game. it wont crash it though!")
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'btngaymermode
+        '
+        Me.btngaymermode.Enabled = False
+        Me.btngaymermode.Font = New System.Drawing.Font("Comic Sans MS", 9.0!)
+        Me.btngaymermode.Location = New System.Drawing.Point(740, 188)
+        Me.btngaymermode.Margin = New System.Windows.Forms.Padding(2)
+        Me.btngaymermode.Name = "btngaymermode"
+        Me.btngaymermode.Size = New System.Drawing.Size(131, 24)
+        Me.btngaymermode.TabIndex = 24
+        Me.btngaymermode.Text = "silly freak mode :3"
+        Me.totGlag.SetToolTip(Me.btngaymermode, "gaming :O")
+        Me.btngaymermode.UseVisualStyleBackColor = True
+        Me.btngaymermode.Visible = False
         '
         'txtDecor5
         '
@@ -229,18 +257,6 @@ Partial Class frmClicker
         'Autoclick
         '
         Me.Autoclick.Interval = 1000
-        '
-        'btnAuto
-        '
-        Me.btnAuto.Font = New System.Drawing.Font("Comic Sans MS", 9.0!)
-        Me.btnAuto.Location = New System.Drawing.Point(696, 296)
-        Me.btnAuto.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnAuto.Name = "btnAuto"
-        Me.btnAuto.Size = New System.Drawing.Size(175, 66)
-        Me.btnAuto.TabIndex = 17
-        Me.btnAuto.Text = "Autoclicker: 50,000 clicks"
-        Me.totGlag.SetToolTip(Me.btnAuto, "holy moly!!! this is a bit overpowered, but its epic :]]]")
-        Me.btnAuto.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -278,6 +294,22 @@ Partial Class frmClicker
         Me.lblautclcmod.TabIndex = 20
         Me.lblautclcmod.Text = "current autoclick modifier: undefined"
         '
+        'animationtimer
+        '
+        Me.animationtimer.Interval = 20
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.ClickerGame.My.Resources.Resources.thorn_freaknuts
+        Me.PictureBox1.Location = New System.Drawing.Point(-6, -9)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(455, 394)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 25
+        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.Visible = False
+        '
         'piculcok
         '
         Me.piculcok.Image = Global.ClickerGame.My.Resources.Resources.ihaveanimportantmessageforyou_ezgif_com_added_text
@@ -289,53 +321,37 @@ Partial Class frmClicker
         Me.piculcok.TabIndex = 21
         Me.piculcok.TabStop = False
         '
-        'btnAutoToggle
+        'picBook
         '
-        Me.btnAutoToggle.Font = New System.Drawing.Font("Comic Sans MS", 9.0!)
-        Me.btnAutoToggle.Location = New System.Drawing.Point(634, 338)
-        Me.btnAutoToggle.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnAutoToggle.Name = "btnAutoToggle"
-        Me.btnAutoToggle.Size = New System.Drawing.Size(58, 24)
-        Me.btnAutoToggle.TabIndex = 22
-        Me.btnAutoToggle.Text = "toggle"
-        Me.totGlag.SetToolTip(Me.btnAutoToggle, "toggle if u want :)")
-        Me.btnAutoToggle.UseVisualStyleBackColor = True
-        Me.btnAutoToggle.Visible = False
+        Me.picBook.Image = Global.ClickerGame.My.Resources.Resources.book_icon
+        Me.picBook.Location = New System.Drawing.Point(326, 40)
+        Me.picBook.Name = "picBook"
+        Me.picBook.Size = New System.Drawing.Size(100, 100)
+        Me.picBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.picBook.TabIndex = 16
+        Me.picBook.TabStop = False
+        Me.totGlag.SetToolTip(Me.picBook, "woah, you found my scrapbook! open it if you want.")
+        Me.picBook.Visible = False
         '
-        'Button2
+        'picGlag
         '
-        Me.Button2.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(787, 213)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(84, 82)
-        Me.Button2.TabIndex = 23
-        Me.Button2.Text = "Max Upgrade (WILL LAG GAME FOR A BIT)"
-        Me.totGlag.SetToolTip(Me.Button2, "yeah... uh.... it lags the game. it wont crash it though!")
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'rbgtimertest
-        '
-        Me.rbgtimertest.Interval = 1
-        '
-        'btngaymermode
-        '
-        Me.btngaymermode.Font = New System.Drawing.Font("Comic Sans MS", 9.0!)
-        Me.btngaymermode.Location = New System.Drawing.Point(741, 184)
-        Me.btngaymermode.Margin = New System.Windows.Forms.Padding(2)
-        Me.btngaymermode.Name = "btngaymermode"
-        Me.btngaymermode.Size = New System.Drawing.Size(131, 24)
-        Me.btngaymermode.TabIndex = 24
-        Me.btngaymermode.Text = "silly gamer mode"
-        Me.totGlag.SetToolTip(Me.btngaymermode, "gaming :O")
-        Me.btngaymermode.UseVisualStyleBackColor = True
-        Me.btngaymermode.Visible = False
+        Me.picGlag.Image = Global.ClickerGame.My.Resources.Resources.gigglridle
+        Me.picGlag.Location = New System.Drawing.Point(17, 167)
+        Me.picGlag.Name = "picGlag"
+        Me.picGlag.Size = New System.Drawing.Size(135, 81)
+        Me.picGlag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picGlag.TabIndex = 14
+        Me.picGlag.TabStop = False
+        Me.totGlag.SetToolTip(Me.picGlag, "testing testing hai chat :))")
+        Me.picGlag.Visible = False
         '
         'frmClicker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(883, 381)
+        Me.ClientSize = New System.Drawing.Size(436, 381)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.piculcok)
         Me.Controls.Add(Me.btngaymermode)
         Me.Controls.Add(Me.Button2)
@@ -366,9 +382,10 @@ Partial Class frmClicker
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Clicker Game"
         Me.TransparencyKey = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.piculcok, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picBook, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picGlag, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.piculcok, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -398,6 +415,7 @@ Partial Class frmClicker
     Friend WithEvents piculcok As PictureBox
     Friend WithEvents btnAutoToggle As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents rbgtimertest As Timer
+    Friend WithEvents animationtimer As Timer
     Friend WithEvents btngaymermode As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
