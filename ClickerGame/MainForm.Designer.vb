@@ -41,6 +41,8 @@ Partial Class frmClicker
         Me.btnAutoToggle = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btngaymermode = New System.Windows.Forms.Button()
+        Me.picBook = New System.Windows.Forms.PictureBox()
+        Me.picGlag = New System.Windows.Forms.PictureBox()
         Me.txtDecor5 = New System.Windows.Forms.TextBox()
         Me.Autoclick = New System.Windows.Forms.Timer(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
@@ -49,12 +51,10 @@ Partial Class frmClicker
         Me.animationtimer = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.piculcok = New System.Windows.Forms.PictureBox()
-        Me.picBook = New System.Windows.Forms.PictureBox()
-        Me.picGlag = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.piculcok, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picBook, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picGlag, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.piculcok, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -244,6 +244,30 @@ Partial Class frmClicker
         Me.btngaymermode.UseVisualStyleBackColor = True
         Me.btngaymermode.Visible = False
         '
+        'picBook
+        '
+        Me.picBook.Image = Global.ClickerGame.My.Resources.Resources.book_icon
+        Me.picBook.Location = New System.Drawing.Point(326, 40)
+        Me.picBook.Name = "picBook"
+        Me.picBook.Size = New System.Drawing.Size(100, 100)
+        Me.picBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.picBook.TabIndex = 16
+        Me.picBook.TabStop = False
+        Me.totGlag.SetToolTip(Me.picBook, "woah, you found my scrapbook! open it if you want.")
+        Me.picBook.Visible = False
+        '
+        'picGlag
+        '
+        Me.picGlag.Image = Global.ClickerGame.My.Resources.Resources.gigglridle
+        Me.picGlag.Location = New System.Drawing.Point(17, 167)
+        Me.picGlag.Name = "picGlag"
+        Me.picGlag.Size = New System.Drawing.Size(135, 81)
+        Me.picGlag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picGlag.TabIndex = 14
+        Me.picGlag.TabStop = False
+        Me.totGlag.SetToolTip(Me.picGlag, "testing testing hai chat :))")
+        Me.picGlag.Visible = False
+        '
         'txtDecor5
         '
         Me.txtDecor5.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
@@ -301,7 +325,7 @@ Partial Class frmClicker
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.ClickerGame.My.Resources.Resources.thorn_freaknuts
-        Me.PictureBox1.Location = New System.Drawing.Point(-6, -9)
+        Me.PictureBox1.Location = New System.Drawing.Point(-11, -5)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(455, 394)
@@ -320,30 +344,6 @@ Partial Class frmClicker
         Me.piculcok.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.piculcok.TabIndex = 21
         Me.piculcok.TabStop = False
-        '
-        'picBook
-        '
-        Me.picBook.Image = Global.ClickerGame.My.Resources.Resources.book_icon
-        Me.picBook.Location = New System.Drawing.Point(326, 40)
-        Me.picBook.Name = "picBook"
-        Me.picBook.Size = New System.Drawing.Size(100, 100)
-        Me.picBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.picBook.TabIndex = 16
-        Me.picBook.TabStop = False
-        Me.totGlag.SetToolTip(Me.picBook, "woah, you found my scrapbook! open it if you want.")
-        Me.picBook.Visible = False
-        '
-        'picGlag
-        '
-        Me.picGlag.Image = Global.ClickerGame.My.Resources.Resources.gigglridle
-        Me.picGlag.Location = New System.Drawing.Point(17, 167)
-        Me.picGlag.Name = "picGlag"
-        Me.picGlag.Size = New System.Drawing.Size(135, 81)
-        Me.picGlag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picGlag.TabIndex = 14
-        Me.picGlag.TabStop = False
-        Me.totGlag.SetToolTip(Me.picGlag, "testing testing hai chat :))")
-        Me.picGlag.Visible = False
         '
         'frmClicker
         '
@@ -382,10 +382,10 @@ Partial Class frmClicker
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Clicker Game"
         Me.TransparencyKey = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.piculcok, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picBook, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picGlag, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.piculcok, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

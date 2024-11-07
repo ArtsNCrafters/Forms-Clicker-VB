@@ -75,6 +75,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="secretform.Designer.vb">
+      <DependentUpon>secretform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="secretform.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ScrapbookForm.resx">
       <DependentUpon>ScrapbookForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="secretform.resx">
+      <DependentUpon>secretform.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

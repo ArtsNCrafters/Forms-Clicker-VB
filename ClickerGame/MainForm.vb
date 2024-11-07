@@ -322,22 +322,30 @@ Public Class frmClicker
     Private funny As Integer
     Private Sub btngaymermode_Click(sender As Object, e As EventArgs) Handles btngaymermode.Click
         PictureBox1.Visible = True
-        Dim yes As Integer = 1
+        Me.ShowInTaskbar = False
         Me.Size = MinimumSize
-        animationtimer.Enabled = True
         funny = 0
-        Do Until funny = 100
+        animationtimer.Enabled = True
 
-        Loop
-        Me.Text = "I have bricked your game. there is no escape (until I add data saving)"
-        Me.Icon = ScrapbookForm.Icon
-        Do Until yes = 0
-
-        Loop
-        Me.Close()
     End Sub
 
     Private Sub rbgtimertest_Tick(sender As Object, e As EventArgs) Handles animationtimer.Tick
-        funny += 1
+        If funny < 5 Then
+            funny += 1
+
+        Else
+            Me.Text = "Good Luck"
+            Dim yes As Integer = 1
+            Me.Icon = SecretForm.Icon
+
+            Do Until yes = 0
+
+            Loop
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub frmClicker_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
