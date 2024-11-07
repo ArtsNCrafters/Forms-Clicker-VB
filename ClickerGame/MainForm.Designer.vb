@@ -129,7 +129,7 @@ Partial Class frmClicker
         'btnDev
         '
         Me.btnDev.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDev.Location = New System.Drawing.Point(350, 9)
+        Me.btnDev.Location = New System.Drawing.Point(367, 381)
         Me.btnDev.Name = "btnDev"
         Me.btnDev.Size = New System.Drawing.Size(75, 23)
         Me.btnDev.TabIndex = 6
@@ -325,7 +325,7 @@ Partial Class frmClicker
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.ClickerGame.My.Resources.Resources.thorn_freaknuts
-        Me.PictureBox1.Location = New System.Drawing.Point(-11, -5)
+        Me.PictureBox1.Location = New System.Drawing.Point(-12, -8)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(455, 394)
