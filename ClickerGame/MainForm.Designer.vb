@@ -51,6 +51,7 @@ Partial Class frmClicker
         Me.animationtimer = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.piculcok = New System.Windows.Forms.PictureBox()
+        Me.btnopensave = New System.Windows.Forms.Button()
         CType(Me.picBook, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picGlag, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -325,7 +326,7 @@ Partial Class frmClicker
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.ClickerGame.My.Resources.Resources.thorn_freaknuts
-        Me.PictureBox1.Location = New System.Drawing.Point(-12, -8)
+        Me.PictureBox1.Location = New System.Drawing.Point(382, 296)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(455, 394)
@@ -345,12 +346,22 @@ Partial Class frmClicker
         Me.piculcok.TabIndex = 21
         Me.piculcok.TabStop = False
         '
+        'btnopensave
+        '
+        Me.btnopensave.Location = New System.Drawing.Point(146, 44)
+        Me.btnopensave.Name = "btnopensave"
+        Me.btnopensave.Size = New System.Drawing.Size(82, 27)
+        Me.btnopensave.TabIndex = 26
+        Me.btnopensave.Text = "Save test"
+        Me.btnopensave.UseVisualStyleBackColor = True
+        '
         'frmClicker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(436, 381)
+        Me.Controls.Add(Me.btnopensave)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.piculcok)
         Me.Controls.Add(Me.btngaymermode)
@@ -418,4 +429,5 @@ Partial Class frmClicker
     Friend WithEvents animationtimer As Timer
     Friend WithEvents btngaymermode As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnopensave As Button
 End Class

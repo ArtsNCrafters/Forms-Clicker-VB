@@ -348,4 +348,8 @@ Public Class frmClicker
     Private Sub frmClicker_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub btnopensave_Click(sender As Object, e As EventArgs) Handles btnopensave.Click
+        SecretForm.Visible = True
+    End Sub
 End Class
