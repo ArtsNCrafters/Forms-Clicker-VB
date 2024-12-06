@@ -25,7 +25,7 @@ Partial Class SecretForm
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SecretForm))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
-        Me.btnLoad = New System.Windows.Forms.Button()
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.txtpluh = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
@@ -47,14 +47,14 @@ Partial Class SecretForm
         Me.btnSave.Text = "save"
         Me.btnSave.UseVisualStyleBackColor = True
         '
-        'btnLoad
+        'btnExit
         '
-        Me.btnLoad.Location = New System.Drawing.Point(248, 256)
-        Me.btnLoad.Name = "btnLoad"
-        Me.btnLoad.Size = New System.Drawing.Size(75, 23)
-        Me.btnLoad.TabIndex = 2
-        Me.btnLoad.Text = "load"
-        Me.btnLoad.UseVisualStyleBackColor = True
+        Me.btnExit.Location = New System.Drawing.Point(248, 256)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(75, 23)
+        Me.btnExit.TabIndex = 2
+        Me.btnExit.Text = "E&xit"
+        Me.btnExit.UseVisualStyleBackColor = True
         '
         'txtpluh
         '
@@ -70,7 +70,7 @@ Partial Class SecretForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(352, 291)
         Me.Controls.Add(Me.txtpluh)
-        Me.Controls.Add(Me.btnLoad)
+        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -84,6 +84,6 @@ Partial Class SecretForm
 
     Friend WithEvents Label1 As Label
     Friend WithEvents btnSave As Button
-    Friend WithEvents btnLoad As Button
+    Friend WithEvents btnExit As Button
     Friend WithEvents txtpluh As TextBox
 End Class
